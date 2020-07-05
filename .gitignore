@@ -30,7 +30,9 @@
 *.exe
 *.out
 *.app
+main
 
 # vscode config
 .vscode
 .DS_Store
+main.dSYM
