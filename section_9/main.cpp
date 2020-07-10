@@ -16,8 +16,8 @@ int main()
         cout << "M - Display mean of the numbers" << endl;
         cout << "S - Display the smallest numbers" << endl;
         cout << "L - Display the largest numbers" << endl;
-        cout << "Q - Quit :(" << endl;
-        cout << endl;
+        cout << "Q - Quit :(" << endl
+             << endl;
 
         cout << "Enter your choice: ";
         cin >> input;
@@ -106,7 +106,8 @@ int main()
         }
         case 'Q':
         case 'q':
-            cout << "Goodbye!" << endl;
+            cout << "Goodbye!" << endl
+                 << endl;
             should_loop = false;
             break;
         default:
