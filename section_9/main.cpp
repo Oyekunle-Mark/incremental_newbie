@@ -11,6 +11,14 @@ int main()
 
     while (should_loop)
     {
+        cout << "\nP - Print numbers" << endl;
+        cout << "A - Add a number" << endl;
+        cout << "M - Display mean of the numbers" << endl;
+        cout << "S - Display the smallest numbers" << endl;
+        cout << "L - Display the largest numbers" << endl;
+        cout << "Q - Quit :(" << endl;
+        cout << endl;
+
         cout << "Enter your choice: ";
         cin >> input;
 
@@ -36,7 +44,7 @@ int main()
         case 'a':
         {
             int new_item{};
-            cout << "Enter an integer to add: ";
+            cout << "Enter an integer to add to the list: ";
             cin >> new_item;
             vec.push_back(new_item);
             cout << new_item << " added." << endl;
