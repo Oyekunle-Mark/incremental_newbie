@@ -11,7 +11,7 @@ int main()
 
     while (should_loop)
     {
-        cout << "Enter your choice: " << endl;
+        cout << "Enter your choice: ";
         cin >> input;
 
         switch (input)
