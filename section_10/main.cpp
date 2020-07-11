@@ -29,6 +29,16 @@ int main()
 
     cout << "\nDecrypting message...\n";
 
+    for (size_t i{}; i < secret.length(); ++i)
+    {
+        size_t pos_in_keys = KEYS.find(secret.at(i));
+
+        if (pos_in_keys == string::npos)
+            continue;
+
+        secret.at(i) = ALPHABET.at(pos_in_keys);
+    }
+
     cout << endl
          << secret << endl;
 
