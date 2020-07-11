@@ -14,6 +14,16 @@ int main()
 
     cout << "\nEncryping message...\n";
 
+    for (size_t i{}; i < secret.length(); ++i)
+    {
+        size_t pos_in_alphabet = ALPHABET.find(secret.at(i));
+
+        if (pos_in_alphabet == string::npos)
+            continue;
+
+        secret.at(i) = KEYS.at(pos_in_alphabet);
+    }
+
     cout << endl
          << secret << endl;
 
