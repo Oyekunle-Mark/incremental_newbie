@@ -5,6 +5,7 @@ using namespace std;
 
 void print_menu();
 void read_input(char &receiver);
+void print_integers(vector<int> &vec);
 
 int main()
 {
@@ -21,19 +22,7 @@ int main()
         {
         case 'P':
         case 'p':
-            if (vec.size())
-            {
-                cout << "[ ";
-
-                for (auto item : vec)
-                    cout << item << " ";
-
-                cout << "]" << endl;
-            }
-            else
-            {
-                cout << "[]" << endl;
-            }
+            print_integers(vec);
             break;
         case 'A':
         case 'a':
@@ -130,7 +119,25 @@ void print_menu()
          << endl;
 }
 
-void read_input(char &receiver) {
+void read_input(char &receiver)
+{
     cout << "Enter your choice: ";
     cin >> receiver;
+}
+
+void print_integers(vector<int> &vec)
+{
+    if (vec.size())
+    {
+        cout << "[ ";
+
+        for (auto item : vec)
+            cout << item << " ";
+
+        cout << "]" << endl;
+    }
+    else
+    {
+        cout << "[]" << endl;
+    }
 }
