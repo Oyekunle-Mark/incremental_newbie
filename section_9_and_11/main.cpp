@@ -7,6 +7,7 @@ void print_menu();
 void read_input(char &receiver);
 void print_integers(vector<int> &vec);
 void add_integers(vector<int> &vec);
+void find_mean(vector<int> &vec);
 
 int main()
 {
@@ -34,19 +35,7 @@ int main()
         case 'M':
         case 'm':
         {
-            if (vec.size())
-            {
-                double total{};
-
-                for (auto item : vec)
-                    total += item;
-
-                cout << "The mean is: " << (total / vec.size()) << endl;
-            }
-            else
-            {
-                cout << "Unable to calculate mean - no data." << endl;
-            }
+            find_mean(vec);
             break;
         }
         case 'S':
@@ -146,4 +135,21 @@ void add_integers(vector<int> &vec)
     cin >> new_item;
     vec.push_back(new_item);
     cout << new_item << " added." << endl;
+}
+
+void find_mean(vector<int> &vec)
+{
+    if (vec.size())
+    {
+        double total{};
+
+        for (auto item : vec)
+            total += item;
+
+        cout << "The mean is: " << (total / vec.size()) << endl;
+    }
+    else
+    {
+        cout << "Unable to calculate mean - no data." << endl;
+    }
 }
