@@ -3,6 +3,8 @@
 
 using namespace std;
 
+void print_menu();
+
 int main()
 {
     bool should_loop{true};
@@ -11,13 +13,7 @@ int main()
 
     while (should_loop)
     {
-        cout << "\nP - Print numbers" << endl;
-        cout << "A - Add a number" << endl;
-        cout << "M - Display mean of the numbers" << endl;
-        cout << "S - Display the smallest numbers" << endl;
-        cout << "L - Display the largest numbers" << endl;
-        cout << "Q - Quit :(" << endl
-             << endl;
+        print_menu();
 
         cout << "Enter your choice: ";
         cin >> input;
@@ -116,4 +112,21 @@ int main()
     }
 
     return 0;
+}
+
+void print_menu()
+{
+    cout << "\nP - Print numbers"
+         << endl
+         << "A - Add a number"
+         << endl
+         << "M - Display mean of the numbers"
+         << endl
+         << "S - Display the smallest numbers"
+         << endl
+         << "L - Display the largest numbers"
+         << endl
+         << "Q - Quit :("
+         << endl
+         << endl;
 }
