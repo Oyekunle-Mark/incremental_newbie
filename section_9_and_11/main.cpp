@@ -25,35 +25,21 @@ int main()
         switch (input)
         {
         case 'P':
-        case 'p':
             print_integers(vec);
             break;
         case 'A':
-        case 'a':
-        {
             add_integers(vec);
             break;
-        }
         case 'M':
-        case 'm':
-        {
             find_mean(vec);
             break;
-        }
         case 'S':
-        case 's':
-        {
             find_min(vec);
             break;
-        }
         case 'L':
-        case 'l':
-        {
             find_max(vec);
             break;
-        }
         case 'Q':
-        case 'q':
             cout << "Goodbye!" << endl
                  << endl;
             should_loop = false;
@@ -85,8 +71,12 @@ void print_menu()
 
 void read_input(char &receiver)
 {
+    char new_input{};
+
     cout << "Enter your choice: ";
-    cin >> receiver;
+    cin >> new_input;
+
+    receiver = toupper(new_input);
 }
 
 void print_integers(vector<int> &vec)
