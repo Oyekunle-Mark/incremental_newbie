@@ -8,6 +8,7 @@ void read_input(char &receiver);
 void print_integers(vector<int> &vec);
 void add_integers(vector<int> &vec);
 void find_mean(vector<int> &vec);
+void find_min(vector<int> &vec);
 
 int main()
 {
@@ -41,19 +42,7 @@ int main()
         case 'S':
         case 's':
         {
-            if (vec.size())
-            {
-                int smallest{vec.at(0)};
-
-                for (auto item : vec)
-                    smallest = item < smallest ? item : smallest;
-
-                cout << "The smallest number is: " << smallest << endl;
-            }
-            else
-            {
-                cout << "Unable to determine the smallest number - list is empty" << endl;
-            }
+            find_min(vec);
             break;
         }
         case 'L':
@@ -151,5 +140,22 @@ void find_mean(vector<int> &vec)
     else
     {
         cout << "Unable to calculate mean - no data." << endl;
+    }
+}
+
+void find_min(vector<int> &vec)
+{
+    if (vec.size())
+    {
+        int smallest{vec.at(0)};
+
+        for (auto item : vec)
+            smallest = item < smallest ? item : smallest;
+
+        cout << "The smallest number is: " << smallest << endl;
+    }
+    else
+    {
+        cout << "Unable to determine the smallest number - list is empty" << endl;
     }
 }
