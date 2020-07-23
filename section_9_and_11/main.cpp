@@ -6,6 +6,7 @@ using namespace std;
 void print_menu();
 void read_input(char &receiver);
 void print_integers(vector<int> &vec);
+void add_integers(vector<int> &vec);
 
 int main()
 {
@@ -27,11 +28,7 @@ int main()
         case 'A':
         case 'a':
         {
-            int new_item{};
-            cout << "Enter an integer to add to the list: ";
-            cin >> new_item;
-            vec.push_back(new_item);
-            cout << new_item << " added." << endl;
+            add_integers(vec);
             break;
         }
         case 'M':
@@ -140,4 +137,13 @@ void print_integers(vector<int> &vec)
     {
         cout << "[]" << endl;
     }
+}
+
+void add_integers(vector<int> &vec)
+{
+    int new_item{};
+    cout << "Enter an integer to add to the list: ";
+    cin >> new_item;
+    vec.push_back(new_item);
+    cout << new_item << " added." << endl;
 }
