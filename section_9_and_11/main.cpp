@@ -4,6 +4,7 @@
 using namespace std;
 
 void print_menu();
+void read_input(char &receiver);
 
 int main()
 {
@@ -14,9 +15,7 @@ int main()
     while (should_loop)
     {
         print_menu();
-
-        cout << "Enter your choice: ";
-        cin >> input;
+        read_input(input);
 
         switch (input)
         {
@@ -129,4 +128,9 @@ void print_menu()
          << "Q - Quit :("
          << endl
          << endl;
+}
+
+void read_input(char &receiver) {
+    cout << "Enter your choice: ";
+    cin >> receiver;
 }
