@@ -9,6 +9,7 @@ void print_integers(vector<int> &vec);
 void add_integers(vector<int> &vec);
 void find_mean(vector<int> &vec);
 void find_min(vector<int> &vec);
+void find_max(vector<int> &vec);
 
 int main()
 {
@@ -48,19 +49,7 @@ int main()
         case 'L':
         case 'l':
         {
-            if (vec.size())
-            {
-                int largest{vec.at(0)};
-
-                for (auto item : vec)
-                    largest = item > largest ? item : largest;
-
-                cout << "The largest number is: " << largest << endl;
-            }
-            else
-            {
-                cout << "Unable to determine the largest number - list is empty" << endl;
-            }
+            find_max(vec);
             break;
         }
         case 'Q':
@@ -157,5 +146,22 @@ void find_min(vector<int> &vec)
     else
     {
         cout << "Unable to determine the smallest number - list is empty" << endl;
+    }
+}
+
+void find_max(vector<int> &vec)
+{
+    if (vec.size())
+    {
+        int largest{vec.at(0)};
+
+        for (auto item : vec)
+            largest = item > largest ? item : largest;
+
+        cout << "The largest number is: " << largest << endl;
+    }
+    else
+    {
+        cout << "Unable to determine the largest number - list is empty" << endl;
     }
 }
