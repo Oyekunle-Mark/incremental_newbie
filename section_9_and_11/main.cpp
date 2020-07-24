@@ -85,7 +85,7 @@ void print_integers(vector<int> const &vec)
     {
         cout << "[ ";
 
-        for (auto item : vec)
+        for (auto const &item : vec)
             cout << item << " ";
 
         cout << "]" << endl;
@@ -111,7 +111,7 @@ void find_mean(vector<int> const &vec)
     {
         double total{};
 
-        for (auto item : vec)
+        for (auto const &item : vec)
             total += item;
 
         cout << "The mean is: " << (total / vec.size()) << endl;
@@ -128,7 +128,7 @@ void find_min(vector<int> const &vec)
     {
         int smallest{vec.at(0)};
 
-        for (auto item : vec)
+        for (auto const &item : vec)
             smallest = item < smallest ? item : smallest;
 
         cout << "The smallest number is: " << smallest << endl;
@@ -145,7 +145,7 @@ void find_max(vector<int> const &vec)
     {
         int largest{vec.at(0)};
 
-        for (auto item : vec)
+        for (auto const &item : vec)
             largest = item > largest ? item : largest;
 
         cout << "The largest number is: " << largest << endl;
