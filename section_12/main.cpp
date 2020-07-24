@@ -22,6 +22,7 @@ int main()
     print_array(result, 15);
 
     delete[] result;
+    return 0;
 }
 
 void print_array(const int *const arr, size_t size)
