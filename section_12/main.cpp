@@ -27,19 +27,25 @@ int main()
 
 void print_array(const int *const arr, size_t size)
 {
+    cout << "[ ";
+
     for (size_t i{}; i < size; ++i)
         cout << arr[i] << " ";
-    cout << endl;
+
+    cout << "]"
+         << endl;
 }
 
 int *apply_all(const int *const arr1, size_t size1, const int *const arr2, size_t size2)
 {
     int *result{nullptr};
     result = new int[size1 * size2];
-    int pos {0};
+    int pos{0};
 
-    for (size_t i{}; i < size2; ++i) {
-        for (size_t j{}; j < size1; ++j) {
+    for (size_t i{}; i < size2; ++i)
+    {
+        for (size_t j{}; j < size1; ++j)
+        {
             result[pos] = arr2[i] * arr1[j];
             ++pos;
         }
