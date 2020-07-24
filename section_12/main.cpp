@@ -14,7 +14,7 @@ int main()
     print_array(arr1, 5);
 
     cout << "Array 2: ";
-    print_array(arr2, 5);
+    print_array(arr2, 3);
 
     int *result = apply_all(arr1, 5, arr2, 3);
 
@@ -26,6 +26,9 @@ int main()
 
 void print_array(const int *const arr, size_t size)
 {
+    for (size_t i{}; i < size; ++i)
+        cout << arr[i] << " ";
+    cout << endl;
 }
 
 int *apply_all(const int *const arr1, size_t size1, const int *const arr2, size_t size2)
