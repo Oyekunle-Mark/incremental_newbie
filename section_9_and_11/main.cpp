@@ -5,11 +5,11 @@ using namespace std;
 
 void print_menu();
 void read_input(char &receiver);
-void print_integers(vector<int> &vec);
+void print_integers(vector<int> const &vec);
 void add_integers(vector<int> &vec);
-void find_mean(vector<int> &vec);
-void find_min(vector<int> &vec);
-void find_max(vector<int> &vec);
+void find_mean(vector<int> const &vec);
+void find_min(vector<int> const &vec);
+void find_max(vector<int> const &vec);
 
 int main()
 {
@@ -79,7 +79,7 @@ void read_input(char &receiver)
     receiver = toupper(new_input);
 }
 
-void print_integers(vector<int> &vec)
+void print_integers(vector<int> const &vec)
 {
     if (vec.size())
     {
@@ -105,7 +105,7 @@ void add_integers(vector<int> &vec)
     cout << new_item << " added." << endl;
 }
 
-void find_mean(vector<int> &vec)
+void find_mean(vector<int> const &vec)
 {
     if (vec.size())
     {
@@ -122,7 +122,7 @@ void find_mean(vector<int> &vec)
     }
 }
 
-void find_min(vector<int> &vec)
+void find_min(vector<int> const &vec)
 {
     if (vec.size())
     {
@@ -139,7 +139,7 @@ void find_min(vector<int> &vec)
     }
 }
 
-void find_max(vector<int> &vec)
+void find_max(vector<int> const &vec)
 {
     if (vec.size())
     {
