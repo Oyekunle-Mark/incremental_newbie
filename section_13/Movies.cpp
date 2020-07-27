@@ -10,7 +10,17 @@ Movies::~Movies() {}
 
 void Movies::add_movie(std::string name, std::string rating, size_t watched)
 {
-    movies_list.push_back(Movie{name, rating, watched});
+    if (hasMovie(name))
+    {
+        std::cout << "Movie "
+                  << name
+                  << " already exists"
+                  << std::endl;
+    }
+    else
+    {
+        movies_list.push_back(Movie{name, rating, watched});
+    }
 }
 
 void Movies::increment_movie_count(std::string name)
