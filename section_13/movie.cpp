@@ -1,5 +1,5 @@
-#include "Movie.h"
 #include <iostream>
+#include "Movie.h"
 
 Movie::Movie(std::string movie_name, std::string movie_rating, size_t watched)
     : movie_name{movie_name}, movie_rating{movie_rating}, watched{watched} {}
