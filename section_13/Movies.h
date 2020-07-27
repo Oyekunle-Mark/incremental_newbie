@@ -15,6 +15,6 @@ public:
     Movies();
     Movies(const Movies &source);
     ~Movies();
-}
+};
 
 #endif
