@@ -11,7 +11,7 @@ private:
 public:
     void add_movie(std::string, std::string, size_t);
     void increment_movie_count(std::string);
-    void display_movies const;
+    void display_movies() const;
     Movies();
     Movies(const Movies &source);
     ~Movies();
