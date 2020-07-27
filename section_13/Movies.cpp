@@ -56,8 +56,14 @@ void Movies::display_movies() const
 {
     if (movies_list.size())
     {
+        std::cout << "\n=========================================="
+                  << std::endl;
+
         for (const Movie &movie : movies_list)
             movie.display_details();
+
+        std::cout << "==========================================\n"
+                  << std::endl;
     }
     else
     {
