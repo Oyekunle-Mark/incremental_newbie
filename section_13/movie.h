@@ -23,6 +23,9 @@ public:
                   << movie_rating << " "
                   << watched << std::endl;
     }
+    Movie();
+    Movie(const Movie &source);
+    ~Movie();
 };
 
 #endif;
