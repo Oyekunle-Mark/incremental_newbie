@@ -8,6 +8,11 @@ Movies::Movies(const Movies &source)
 
 Movies::~Movies() {}
 
+void Movies::add_movie(std::string name, std::string rating, size_t watched)
+{
+    movies_list.push_back(Movie{name, rating, watched});
+}
+
 void Movies::display_movies() const
 {
     if (movies_list.size())
