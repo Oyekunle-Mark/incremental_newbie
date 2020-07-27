@@ -13,6 +13,24 @@ void Movies::add_movie(std::string name, std::string rating, size_t watched)
     movies_list.push_back(Movie{name, rating, watched});
 }
 
+void Movies::increment_movie_count(std::string name)
+{
+    if (hasMovie(name))
+    {
+        for (Movie &movie : movies_list)
+        {
+            if (movie.get_name() == name)
+                movie.increment_watched();
+        }
+    }
+    else
+    {
+        std::cout << "Movie "
+                  << name << " has not been added yet"
+                  << std::endl;
+    }
+}
+
 bool Movies::hasMovie(std::string name) const
 {
     for (const Movie &movie : movies_list)
