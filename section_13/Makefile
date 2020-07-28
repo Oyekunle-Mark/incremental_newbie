@@ -1,5 +1,3 @@
-# Makefile for Separate Compilation Example
-
 # *****************************************************
 # Parameters to control Makefile operation
 
