@@ -14,7 +14,7 @@ protected:
     double get_balance();
 
 public:
-    Account(std::string name, double amount = 0.0);
+    Account(std::string name, double balance = 0.0);
     void withdraw(double amount);
     void deposit(double amount);
 };

@@ -1,7 +1,7 @@
 #include "Account.h"
 
-Account::Account(const std::string name, double amount)
-    : name{name}, balance{amount} {}
+Account::Account(const std::string name, double balance)
+    : name{name}, balance{balance} {}
 
 void Account::deposit(double amount)
 {
