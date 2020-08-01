@@ -16,7 +16,8 @@ void Account::deposit(double amount)
 void Account::withdraw(double amount)
 {
     if (amount > balance)
-        std::cout << "Insufficient balance: " << (*this) << std::endl;
+        std::cout << "Cannot withdraw " << amount << " "
+                  << (*this) << std::endl;
     else
     {
         balance -= amount;
