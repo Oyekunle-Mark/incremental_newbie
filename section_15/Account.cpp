@@ -36,8 +36,8 @@ std::string Account::get_name() const
 
 std::ostream &operator<<(std::ostream &output, const Account &rhs)
 {
-    output << "[" << rhs.name << " "
-           << "Balance: " << rhs.balance << "]"
+    output << "[" << rhs.get_name() << ", "
+           << "Balance: " << rhs.get_balance() << "]"
            << std::endl;
 
     return output;

@@ -11,9 +11,9 @@ void Savings_Account::deposit(double amount)
 
 std::ostream &operator<<(std::ostream &output, const Savings_Account &rhs)
 {
-    output << "[" << rhs.get_name() << " "
-           << "Balance: " << rhs.get_balance() << " "
-           << "Interest rate " << rhs.interest_rate
+    output << "[" << rhs.get_name() << ", "
+           << "Balance: " << rhs.get_balance() << ", "
+           << "Interest rate: " << rhs.interest_rate
            << "]"
            << std::endl;
 
