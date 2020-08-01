@@ -11,7 +11,7 @@ void Trust_Account::deposit(double amount)
 
 void Trust_Account::withdraw(double amount)
 {
-    if (withdrawal_count > max_withdraw)
+    if (withdrawal_count >= max_withdraw)
         std::cout << "Withdrawal count exceeded" << std::endl;
     else
     {
