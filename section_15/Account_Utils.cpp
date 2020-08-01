@@ -53,3 +53,30 @@ void withdraw_all_savings_accounts(std::vector<Savings_Account> &accounts, doubl
     for (Savings_Account &account : accounts)
         account.withdraw(amount);
 }
+
+void display_checking_accounts(const std::vector<Checking_Account> &accounts)
+{
+    std::cout << "\nDisplaying all checking accounts\n"
+              << std::endl;
+
+    for (const Checking_Account &account : accounts)
+        std::cout << account;
+}
+
+void deposit_all_checking_accounts(std::vector<Checking_Account> &accounts, double amount)
+{
+    std::cout << "\nDepositing " << amount << " to all checking accounts\n"
+              << std::endl;
+
+    for (Checking_Account &account : accounts)
+        account.deposit(amount);
+}
+
+void withdraw_all_checking_accounts(std::vector<Checking_Account> &accounts, double amount)
+{
+    std::cout << "\nWithdrawing " << amount << " from all checking accounts\n"
+              << std::endl;
+
+    for (Checking_Account &account : accounts)
+        account.withdraw(amount);
+}

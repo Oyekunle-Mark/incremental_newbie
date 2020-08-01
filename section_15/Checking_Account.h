@@ -9,7 +9,7 @@ private:
     friend std::ostream &operator<<(std::ostream &output, const Checking_Account &rhs);
 
 public:
-    Checking_Account(std::string name, double balance);
+    Checking_Account(std::string name, double balance = 0.0);
     void withdraw(double amount);
 };
 

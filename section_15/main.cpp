@@ -25,4 +25,16 @@ int main()
     display_savings_accounts(savings_account_vec);
     withdraw_all_savings_accounts(savings_account_vec, 600);
     display_savings_accounts(savings_account_vec);
+
+    // checking account type
+    std::vector<Checking_Account> checking_account_vec;
+    checking_account_vec.push_back(Checking_Account{"Checking Account 1"});
+    checking_account_vec.push_back(Checking_Account{"Checking Account 2", 941});
+    checking_account_vec.push_back(Checking_Account{"Checking Account 3", 12});
+
+    display_checking_accounts(checking_account_vec);
+    deposit_all_checking_accounts(checking_account_vec, 320);
+    display_checking_accounts(checking_account_vec);
+    withdraw_all_checking_accounts(checking_account_vec, 400);
+    display_checking_accounts(checking_account_vec);
 }
