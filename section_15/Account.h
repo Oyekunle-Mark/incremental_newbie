@@ -7,7 +7,7 @@ class Account
 {
 private:
     std::string name;
-    double amount;
+    double balance;
     friend std::ostream &operator<<(std::ostream &os, const Account &rhs);
 
 protected:
