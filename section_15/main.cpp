@@ -37,4 +37,19 @@ int main()
     display_checking_accounts(checking_account_vec);
     withdraw_all_checking_accounts(checking_account_vec, 400);
     display_checking_accounts(checking_account_vec);
+
+    // trust account type
+    std::vector<Trust_Account> trust_account_vec;
+    trust_account_vec.push_back(Trust_Account{"Trust Account 1"});
+    trust_account_vec.push_back(Trust_Account{"Trust Account 2", 1500, 7});
+    trust_account_vec.push_back(Trust_Account{"Trust Account 3", 43000, 10});
+
+    display_trust_accounts(trust_account_vec);
+    deposit_all_trust_accounts(trust_account_vec, 6000);
+    display_trust_accounts(trust_account_vec);
+    withdraw_all_trust_accounts(trust_account_vec, 500);
+    withdraw_all_trust_accounts(trust_account_vec, 5000);
+    withdraw_all_trust_accounts(trust_account_vec, 400);
+    withdraw_all_trust_accounts(trust_account_vec, 400);
+    display_trust_accounts(trust_account_vec);
 }
