@@ -4,10 +4,16 @@
 
 class Trust_Account : public Savings_Account
 {
+private:
+    const double deposit_bonus{50.0};
+    const size_t max_withdraw{3};
+    const double withdrawal_percentage_allowed{0.2};
+    size_t withdrawal_count;
+
 public:
-    Trust_Account(std::string name, double balance = 0.0, double interest_rate);
+    Trust_Account(std::string name, double balance = 0.0, double interest_rate = 3.0);
     void withdraw(double amount);
     void deposit(double amount);
-}
+};
 
 #endif
