@@ -4,7 +4,9 @@
 
 class Savings_Account : public Account
 {
-private:
+    friend std::ostream &operator<<(std::ostream &output, const Savings_Account &rhs);
+
+protected:
     double interest_rate;
 
 public:

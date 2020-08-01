@@ -11,7 +11,8 @@ private:
     friend std::ostream &operator<<(std::ostream &os, const Account &rhs);
 
 protected:
-    double get_balance();
+    double get_balance() const;
+    std::string get_name() const;
 
 public:
     Account(std::string name, double balance = 0.0);

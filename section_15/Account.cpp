@@ -22,3 +22,22 @@ void Account::withdraw(double amount)
         balance -= amount;
     }
 }
+
+double Account::get_balance() const
+{
+    return balance;
+}
+
+std::string Account::get_name() const
+{
+    return name;
+}
+
+std::ostream &operator<<(std::ostream &output, const Account &rhs)
+{
+    output << "[" << rhs.name << " "
+           << "Balance: " << rhs.balance << "]"
+           << std::endl;
+
+    return output;
+}
