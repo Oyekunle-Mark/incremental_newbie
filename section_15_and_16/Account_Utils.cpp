@@ -7,7 +7,7 @@ void display_accounts(const std::vector<Account *> &accounts)
               << std::endl;
 
     for (const Account *account : accounts)
-        std::cout << account;
+        std::cout << *account;
 }
 
 void deposit_all_accounts(std::vector<Account *> &accounts, double amount)
