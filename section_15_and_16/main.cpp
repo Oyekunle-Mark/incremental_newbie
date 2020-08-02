@@ -14,32 +14,32 @@ int main()
     withdraw_all_accounts(savings_account_vec, 600);
     display_accounts(savings_account_vec);
 
-    // // checking account type
-    // std::vector<Checking_Account> checking_account_vec;
-    // checking_account_vec.push_back(Checking_Account{"Checking Account 1"});
-    // checking_account_vec.push_back(Checking_Account{"Checking Account 2", 941});
-    // checking_account_vec.push_back(Checking_Account{"Checking Account 3", 12});
+    // checking account type
+    Account *check1 = new Checking_Account{"Checking Account 1"};
+    Account *check2 = new Checking_Account{"Checking Account 2", 941};
+    Account *check3 = new Checking_Account{"Checking Account 3", 12};
+    std::vector<Account *> checking_account_vec {check1,check2,check3};
 
-    // display_checking_accounts(checking_account_vec);
-    // deposit_all_checking_accounts(checking_account_vec, 320);
-    // display_checking_accounts(checking_account_vec);
-    // withdraw_all_checking_accounts(checking_account_vec, 400);
-    // display_checking_accounts(checking_account_vec);
+    display_accounts(checking_account_vec);
+    deposit_all_accounts(checking_account_vec, 320);
+    display_accounts(checking_account_vec);
+    withdraw_all_accounts(checking_account_vec, 400);
+    display_accounts(checking_account_vec);
 
-    // // trust account type
-    // std::vector<Trust_Account> trust_account_vec;
-    // trust_account_vec.push_back(Trust_Account{"Trust Account 1"});
-    // trust_account_vec.push_back(Trust_Account{"Trust Account 2", 1500, 7});
-    // trust_account_vec.push_back(Trust_Account{"Trust Account 3", 43000, 10});
+    // trust account type
+    Account *trust1 = new Trust_Account{"Trust Account 1"};
+    Account *trust2 = new Trust_Account{"Trust Account 2", 1500, 7};
+    Account *trust3 = new Trust_Account{"Trust Account 3", 43000, 10};
+    std::vector<Account *> trust_account_vec {trust1,trust2,trust3};
 
-    // display_trust_accounts(trust_account_vec);
-    // deposit_all_trust_accounts(trust_account_vec, 6000);
-    // display_trust_accounts(trust_account_vec);
-    // withdraw_all_trust_accounts(trust_account_vec, 500);
-    // withdraw_all_trust_accounts(trust_account_vec, 5000);
-    // withdraw_all_trust_accounts(trust_account_vec, 400);
-    // withdraw_all_trust_accounts(trust_account_vec, 400);
-    // display_trust_accounts(trust_account_vec);
+    display_accounts(trust_account_vec);
+    deposit_all_accounts(trust_account_vec, 6000);
+    display_accounts(trust_account_vec);
+    withdraw_all_accounts(trust_account_vec, 500);
+    withdraw_all_accounts(trust_account_vec, 5000);
+    withdraw_all_accounts(trust_account_vec, 400);
+    withdraw_all_accounts(trust_account_vec, 400);
+    display_accounts(trust_account_vec);
 
     return 0;
 }
