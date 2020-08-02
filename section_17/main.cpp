@@ -58,3 +58,14 @@ void fill(std::vector<std::shared_ptr<Test>> &vec, size_t num)
         vec.push_back(std::make_shared<Test>(input_int));
     }
 }
+
+void display(std::vector<std::shared_ptr<Test>> &vec)
+{
+    std::cout << "\nDisplaying vector data" << std::endl;
+    std::cout << "========================" << std::endl;
+
+    for (const auto &test : vec)
+        std::cout << test->get_data() << std::endl;
+
+    std::cout << "========================" << std::endl;
+}
