@@ -12,12 +12,17 @@ public:
     ~I_Printable() = default;
 };
 
-class Account
+std::ostream &operator<<(std::ostream &output, const I_Printable &rhs)
+{
+    rhs.print(output);
+    return output;
+}
+
+class Account : public I_Printable
 {
 private:
     std::string name;
     double balance;
-    friend std::ostream &operator<<(std::ostream &os, const Account &rhs);
 
 protected:
     double get_balance() const;
@@ -27,6 +32,7 @@ public:
     Account(std::string name, double balance = 0.0);
     virtual void withdraw(double amount) = 0;
     virtual void deposit(double amount) = 0;
+    virtual void print(std::ostream &output) const override;
     ~Account() = default;
 };
 
