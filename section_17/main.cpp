@@ -41,3 +41,8 @@ int main()
 
     return 0;
 }
+
+std::unique_ptr<std::vector<std::shared_ptr<Test>>> make()
+{
+    return std::make_unique<std::vector<std::shared_ptr<Test>>>(std::vector<std::shared_ptr<Test>>{});
+}
