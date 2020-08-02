@@ -40,4 +40,3 @@ void Account::print(std::ostream &output) const
            << "Balance: " << this->get_balance() << "]"
            << std::endl;
 }
-

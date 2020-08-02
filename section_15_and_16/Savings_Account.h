@@ -4,14 +4,15 @@
 
 class Savings_Account : public Account
 {
-    friend std::ostream &operator<<(std::ostream &output, const Savings_Account &rhs);
-
 protected:
     double interest_rate;
 
 public:
     Savings_Account(std::string name, double balance = 0.0, double interest_rate = 3.0);
-    void deposit(double amount);
+    virtual void withdraw(double amount) override;
+    virtual void deposit(double amount) override;
+    virtual void print(std::ostream &output) const override;
+    ~Savings_Account() = default;
 };
 
 #endif
