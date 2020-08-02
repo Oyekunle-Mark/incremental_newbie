@@ -1,4 +1,6 @@
 #include <iostream>
+#include <memory>
+#include <vector>
 
 class Test
 {
@@ -20,6 +22,10 @@ public:
         std::cout << "\tTest Destructor (" << data << ")" << std::endl;
     }
 };
+
+std::unique_ptr<std::vector<std::shared_ptr<Test>>> make();
+void fill(std::vector<std::shared_ptr<Test>> &vec, int num);
+void display(std::vector<std::shared_ptr<Test>> &vec);
 
 int main()
 {
