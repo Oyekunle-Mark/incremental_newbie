@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Trust_Account.h"
 
 Trust_Account::Trust_Account(const std::string name, double balance, double interest_rate)
