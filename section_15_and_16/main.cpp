@@ -1,7 +1,9 @@
+#include <iostream>
 #include "Account_Utils.h"
 
 int main()
 {
+    // Using dynamic allocation on the heap
     // savings account type
     Account *sav1 = new Savings_Account{"Savings Account 1"};
     Account *sav2 = new Savings_Account{"Savings Account 2", 500};
@@ -40,6 +42,38 @@ int main()
     withdraw_all_accounts(trust_account_vec, 400);
     withdraw_all_accounts(trust_account_vec, 400);
     display_accounts(trust_account_vec);
+
+    // using object on the stack
+    // savings account type
+    Savings_Account sav{"Stack Savings Acc"};
+    std::cout << "\n === Savings Account === \n" << std::endl;
+    std::cout << sav << std::endl;
+    sav.deposit(200);
+    std::cout << sav << std::endl;
+    sav.withdraw(150);
+    std::cout << sav << std::endl;
+
+    // checking account type
+    Checking_Account check{"Stack Checking Acc", 3235};
+    std::cout << "\n === Checking Account === \n" << std::endl;
+    std::cout << check << std::endl;
+    check.deposit(200);
+    std::cout << check << std::endl;
+    check.withdraw(150);
+    std::cout << check << std::endl;
+
+    // trust account type
+    Trust_Account trust{"Stack Trust Acc", 3235};
+    std::cout << "\n === Trust Account === \n" << std::endl;
+    std::cout << trust << std::endl;
+    trust.deposit(200);
+    std::cout << trust << std::endl;
+    trust.withdraw(434220);
+    std::cout << trust << std::endl;
+    trust.withdraw(10);
+    trust.withdraw(10);
+    trust.withdraw(10);
+    trust.withdraw(10);
 
     return 0;
 }
