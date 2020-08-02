@@ -1,11 +1,5 @@
 #include <iostream>
 
-class Test;
-
-int main()
-{
-}
-
 class Test
 {
 private:
@@ -26,3 +20,7 @@ public:
         std::cout << "\tTest Destructor (" << data << ")" << std::endl;
     }
 };
+
+int main()
+{
+}
