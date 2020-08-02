@@ -12,7 +12,7 @@ public:
     virtual void withdraw(double amount) override;
     virtual void deposit(double amount) override;
     virtual void print(std::ostream &output) const override;
-    ~Savings_Account() = default;
+    virtual ~Savings_Account() = default;
 };
 
 #endif
