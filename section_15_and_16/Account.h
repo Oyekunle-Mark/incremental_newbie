@@ -16,8 +16,9 @@ protected:
 
 public:
     Account(std::string name, double balance = 0.0);
-    void withdraw(double amount);
-    void deposit(double amount);
+    virtual void withdraw(double amount) = 0;
+    virtual void deposit(double amount) = 0;
+    ~Account() = default;
 };
 
 #endif
