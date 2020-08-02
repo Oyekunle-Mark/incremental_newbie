@@ -1,7 +1,6 @@
 #ifndef _ACCOUNT_H_
 #define _ACCOUNT_H_
 #include <string>
-#include <iostream>
 #include "I_Printable.h"
 
 class Account : public I_Printable
