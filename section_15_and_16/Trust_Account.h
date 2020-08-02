@@ -12,8 +12,9 @@ private:
 
 public:
     Trust_Account(std::string name, double balance = 0.0, double interest_rate = 3.0);
-    void withdraw(double amount);
-    void deposit(double amount);
+    virtual void withdraw(double amount) override;
+    virtual void deposit(double amount) override;
+    ~Trust_Account() = default;
 };
 
 #endif
