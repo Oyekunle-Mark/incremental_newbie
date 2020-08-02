@@ -43,6 +43,17 @@ int main()
     withdraw_all_accounts(trust_account_vec, 400);
     display_accounts(trust_account_vec);
 
+    // free allocated memory
+    delete sav1;
+    delete sav2;
+    delete sav3;
+    delete check1;
+    delete check2;
+    delete check3;
+    delete trust1;
+    delete trust2;
+    delete trust3;
+
     // using object on the stack
     // savings account type
     Savings_Account sav{"Stack Savings Acc"};
