@@ -6,7 +6,7 @@ Trust_Account::Trust_Account(const std::string name, double balance, double inte
 
 void Trust_Account::deposit(double amount)
 {
-    amount >= 5000.0 ? (amount + deposit_bonus) : amount;
+    amount = (amount >= 5000.0 ? (amount + deposit_bonus) : amount);
     Savings_Account::deposit(amount);
 }
 
