@@ -6,11 +6,13 @@ class Checking_Account : public Account
 {
 private:
     const double withdrawal_fee{1.5};
-    friend std::ostream &operator<<(std::ostream &output, const Checking_Account &rhs);
 
 public:
     Checking_Account(std::string name, double balance = 0.0);
-    void withdraw(double amount);
+    virtual void withdraw(double amount) override;
+    virtual void deposit(double amount) override;
+    virtual void print(std::ostream &output) const override;
+    ~Checking_Account() = default;
 };
 
 #endif

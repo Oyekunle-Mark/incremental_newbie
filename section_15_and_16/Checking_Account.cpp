@@ -9,13 +9,16 @@ void Checking_Account::withdraw(double amount)
     Account::withdraw(amount);
 }
 
-std::ostream &operator<<(std::ostream &output, const Checking_Account &rhs)
+void Checking_Account::deposit(double amount)
 {
-    output << "[" << rhs.get_name() << ", "
-           << "Balance: " << rhs.get_balance() << ", "
-           << "Withdrawal fee: " << rhs.withdrawal_fee
+    Account::deposit(amount);
+}
+
+void Checking_Account::print(std::ostream &output) const
+{
+    output << "[" << this->get_name() << ", "
+           << "Balance: " << this->get_balance() << ", "
+           << "Withdrawal fee: " << this->withdrawal_fee
            << "]"
            << std::endl;
-
-    return output;
 }
