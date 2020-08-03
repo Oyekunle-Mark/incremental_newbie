@@ -1,8 +1,13 @@
 #include <iostream>
 #include "Account.h"
+#include "IllegalBalanceException.h"
 
 Account::Account(const std::string name, double balance)
-    : name{name}, balance{balance} {}
+    : name{name}, balance{balance}
+{
+    if (balance < 0.0)
+        throw IllegalBalanceException{};
+}
 
 void Account::deposit(double amount)
 {
