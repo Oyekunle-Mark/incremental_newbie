@@ -84,7 +84,7 @@ int main()
     std::cout << trust << std::endl;
     trust.deposit(200);
     std::cout << trust << std::endl;
-    trust.withdraw(434220);
+    trust.withdraw(3000);
     std::cout << trust << std::endl;
     trust.withdraw(10);
     trust.withdraw(10);

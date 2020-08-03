@@ -1,4 +1,5 @@
 #include <iostream>
+#include "InsufficientFundsException.h"
 #include "Account_Utils.h"
 
 void display_accounts(const std::vector<Account *> &accounts)
@@ -25,5 +26,14 @@ void withdraw_all_accounts(std::vector<Account *> &accounts, double amount)
               << std::endl;
 
     for (Account *account : accounts)
-        account->withdraw(amount);
+    {
+        try
+        {
+            account->withdraw(amount);
+        }
+        catch (const InsufficientFundsException &e)
+        {
+            std::cerr << e.what() << std::endl;
+        }
+    }
 }
