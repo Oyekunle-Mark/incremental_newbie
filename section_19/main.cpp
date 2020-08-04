@@ -8,10 +8,8 @@ size_t find_grade(std::string answer, std::string response);
 int main()
 {
     const std::string file_name{"response.txt"};
-    std::string answer{};
-    std::string name{};
-    std::string response{};
-    size_t total_score{};
+    std::string answer{}, name{}, response{};
+    size_t total_score{}, line_count{};
 
     std::ifstream in_file;
     in_file.open(file_name);
@@ -34,15 +32,28 @@ int main()
     print_dashes();
 
     while (in_file >> name >> response)
-    {   
+    {
+        size_t student_score{find_grade(answer, response)};
+        ++line_count;
+        total_score += student_score;
+
         std::cout << std::setw(10)
+                  << std::left
+                  << name
+                  << std::setw(10)
+                  << std::right
+                  << student_score
+                  << std::endl;
+    }
+
+    print_dashes();
+    std::cout << std::setw(10)
               << std::left
-              << name
+              << "Average"
               << std::setw(10)
               << std::right
-              << find_grade(answer, response)
+              << static_cast<double>(total_score) / line_count
               << std::endl;
-    }
 
     in_file.close();
 
