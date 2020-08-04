@@ -26,9 +26,11 @@ int main()
 
     while (std::getline(in_file, line))
     {
-        out_file << line_number << "\t" << line << std::endl;
+        out_file << line_number << "\t\t" << line << std::endl;
         ++line_number;
     }
+
+    std::cout << "File copied successfully" << std::endl;
 
     in_file.close();
     out_file.close();
