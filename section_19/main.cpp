@@ -9,6 +9,9 @@ int main()
 {
     const std::string file_name{"response.txt"};
     std::string answer{};
+    std::string name{};
+    std::string response{};
+    size_t total_score{};
 
     std::ifstream in_file;
     in_file.open(file_name);
@@ -19,14 +22,27 @@ int main()
         return 1;
     }
 
+    in_file >> answer;
+
     std::cout << std::setw(10)
               << std::left
               << "Student"
               << std::setw(10)
               << std::right
-              << "Grade"
+              << "Score"
               << std::endl;
     print_dashes();
+
+    while (in_file >> name >> response)
+    {   
+        std::cout << std::setw(10)
+              << std::left
+              << name
+              << std::setw(10)
+              << std::right
+              << find_grade(answer, response)
+              << std::endl;
+    }
 
     in_file.close();
 
@@ -36,6 +52,7 @@ int main()
 void print_dashes()
 {
     std::cout << std::setw(20) << std::setfill('-') << "" << std::endl;
+    std::cout << std::setfill(' ');
 }
 
 size_t find_grade(std::string answer, std::string response)
