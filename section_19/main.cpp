@@ -22,7 +22,8 @@ int main()
 
     in_file >> answer;
 
-    std::cout << std::setw(10)
+    std::cout << std::endl
+              << std::setw(10)
               << std::left
               << "Student"
               << std::setw(10)
@@ -53,6 +54,7 @@ int main()
               << std::setw(10)
               << std::right
               << static_cast<double>(total_score) / line_count
+              << std::endl
               << std::endl;
 
     in_file.close();
