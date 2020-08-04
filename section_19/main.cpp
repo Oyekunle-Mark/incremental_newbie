@@ -4,6 +4,8 @@
 
 void print_dashes();
 size_t find_grade(std::string answer, std::string response);
+template <typename T, typename U>
+void print_line(T left, U right);
 
 int main()
 {
@@ -22,14 +24,7 @@ int main()
 
     in_file >> answer;
 
-    std::cout << std::endl
-              << std::setw(10)
-              << std::left
-              << "Student"
-              << std::setw(10)
-              << std::right
-              << "Score"
-              << std::endl;
+    print_line("Student", "Score");
     print_dashes();
 
     while (in_file >> name >> response)
@@ -38,24 +33,11 @@ int main()
         ++line_count;
         total_score += student_score;
 
-        std::cout << std::setw(10)
-                  << std::left
-                  << name
-                  << std::setw(10)
-                  << std::right
-                  << student_score
-                  << std::endl;
+        print_line(name, student_score);
     }
 
     print_dashes();
-    std::cout << std::setw(10)
-              << std::left
-              << "Average"
-              << std::setw(10)
-              << std::right
-              << static_cast<double>(total_score) / line_count
-              << std::endl
-              << std::endl;
+    print_line("Average", static_cast<double>(total_score) / line_count);
 
     in_file.close();
 
@@ -66,6 +48,19 @@ void print_dashes()
 {
     std::cout << std::setw(20) << std::setfill('-') << "" << std::endl;
     std::cout << std::setfill(' ');
+}
+
+template <class T, class U>
+void print_line(T left, U right)
+{
+    std::cout << std::endl
+              << std::setw(10)
+              << std::left
+              << left
+              << std::setw(10)
+              << std::right
+              << right
+              << std::endl;
 }
 
 size_t find_grade(std::string answer, std::string response)
