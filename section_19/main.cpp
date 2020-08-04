@@ -19,6 +19,15 @@ int main()
         return 1;
     }
 
+    std::cout << std::setw(10)
+              << std::left
+              << "Student"
+              << std::setw(10)
+              << std::right
+              << "Grade"
+              << std::endl;
+    print_dashes();
+
     in_file.close();
 
     return 0;
