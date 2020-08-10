@@ -36,3 +36,6 @@ main
 .vscode
 .DS_Store
 main.dSYM
+
+# cmake
+build/
